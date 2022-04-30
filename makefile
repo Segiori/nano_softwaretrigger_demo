@@ -26,19 +26,19 @@ VPATH= . : ../common
 	$(CC) -I. $(INC_PATH) $(C_COMPILE_OPTIONS) $(COMMON_OPTIONS) -c $< -o $@
 
 
-NANO_TRIGGER_OBJS= nano_trigger_demo.o \
+NANO_TRIGGER_OBJS= nano_softwaretrigger_demo.o \
       GevUtils.o \
       convertBayer.o \
       X_Display_utils.o
 
-all: nano_trigger_demo
+all: nano_softwaretrigger_demo
 
-nano_trigger_demo : $(NANO_TRIGGER_OBJS)
-	$(CC) -g -o nano_trigger_demo $(NANO_TRIGGER_OBJS) $(LCLLIBS)
+nano_softwaretrigger_demo : $(NANO_TRIGGER_OBJS)
+	$(CC) -g -o nano_softwaretrigger_demo $(NANO_TRIGGER_OBJS) $(LCLLIBS)
 
 
 
 clean:
-	rm *.o nano_trigger_demo 
+	rm *.o nano_softwaretrigger_demo 
 
 
